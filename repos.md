@@ -19,9 +19,10 @@ Actually, the problem came from the source itself. It seems that mirrors.aliyun.
 Then change key **baseurl**. 
 
 
-# Problem 2 Reset /etc/yum.repos.d
+# Problem 2 
+## Reset /etc/yum.repos.d
 
-I was confused by the amount of repo files. Message "Repository ** is listed more than once in the configuration" is keep poping out. So I decided to roll all the way back to its original state. 
+I was overwhelmed by the amount of repo files. Message "Repository ** is listed more than once in the configuration" is keep poping out. So I decided to roll the repos all the way back to their original state. 
 
   cd /etc/yum.repos.d
   rm -f *
