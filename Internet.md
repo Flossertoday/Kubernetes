@@ -2,14 +2,19 @@
 This really took me a few days. None of the guidances I found worked. 
 A few worked partially though. 
 
-###### Get Host IP
+Host System: Win 10
+Virtualized System: CentOS 8
+
+
+## Get Host IP
 Assuming your host is runing Windows. 
 
     ipconfig
 
 Record IPv4 Address and Subnet Mask. 
 
-###### Manage virtual ethernet adapters
+
+## Manage virtual ethernet adapters
 In VirtualBox, not in the virtualized system. 
 
 File -> Host Network Manager(Ctrl + H)
@@ -33,9 +38,8 @@ Like that.
 
 System should be powered off to apply these changes. 
 
-###### More configurations in the virtualized system. 
 
-System: CentOS 8
+## More configurations in the virtualized system. 
 
 Get into Settings -> Network. Create a new profile. 
 
@@ -59,7 +63,8 @@ Now you should have 2 adapters and 2 profiles.
 
 Now you're mostly done. Make sure both ethernet adapters are connected. Then reboot. 
 
-###### Check
+
+## Check
 Run in virtualized system. 
 
     ping www.baidu.com
@@ -69,3 +74,4 @@ Also try in Host.
 
     ping www.baidu.com
     ping *Virtual IP*
+
