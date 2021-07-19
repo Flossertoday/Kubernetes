@@ -33,6 +33,17 @@ Then initialize kubeadm again,
 
     kubeadm init --apiserver-advertise-address=192.168.1.140 --image-repository=registry.aliyuncs.com/google_containers --pod-network-cidr=10.244.0.0/16  --ignore-preflight-errors=Swap
 
+Deploy flannel,
+
+    echo "151.101.128.133 raw.githubusercontent.com" >> /etc/hosts
+    wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+    kubectl apply -f kube-flannel.yml
+
+Wait for a few minutes. Then check,
+
+    kubectl get nodes -o wide
+    kubectl get pods -A
+
 You should be good to go now. 
 
 ## Other useful commands
