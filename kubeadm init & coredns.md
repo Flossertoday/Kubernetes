@@ -39,6 +39,8 @@ Deploy flannel,
     wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
     kubectl apply -f kube-flannel.yml
 
+If it's a reset, **wget** can be skipped. 
+
 Wait for a few minutes. Then check,
 
     kubectl get nodes -o wide
